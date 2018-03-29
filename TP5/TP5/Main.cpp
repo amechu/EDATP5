@@ -1,4 +1,44 @@
-int main(void)
+#include "EventGenerator.h"
+#include "EventHandling.h"
+#include "Dispatcher.h"
+#include "Userdata.h"
+#include "Scene.h"
+
+int main(void) {
+
+	EventGenerator EventGenerator;
+	Dispatcher Dispatcher;
+	Userdata Userdata;
+	Scene Scene;
+	Event Event;
+
+	//initialize();
+
+	while (Event != Event::Quit) {
+
+		Event = EventGenerator.fetchEvent(Userdata); //C++ reference
+
+		if (Event != Event::noEvent) {
+			
+			Dispatcher.Dispatch(Event, Userdata); //C++ reference
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*int main(void)
 {
 	startTimer();
 
@@ -70,4 +110,4 @@ public:
 ***DIVISION***
 clase escenario //el dispatcher habla con el escenario y no con los worms. le dice al escenario que actualice todo que dibuja el background y los worms. escenario contiene a los worms y a la informacion del background.
 clase worm
-main con dispatcher/gen de eventos
+main con dispatcher/gen de eventos*/

@@ -115,7 +115,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dispatcher.cpp" />
+    <ClCompile Include="EventGenerator.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Userdata.cpp" />
+    <ClCompile Include="Worm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dispatcher.h" />
+    <ClInclude Include="EventGenerator.h" />
+    <ClInclude Include="EventHandling.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Userdata.h" />
+    <ClInclude Include="Worm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
