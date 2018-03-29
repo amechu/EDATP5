@@ -130,6 +130,7 @@
     <ClInclude Include="Dispatcher.h" />
     <ClInclude Include="EventGenerator.h" />
     <ClInclude Include="EventHandling.h" />
+    <ClInclude Include="Keys.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Userdata.h" />
     <ClInclude Include="Worm.h" />

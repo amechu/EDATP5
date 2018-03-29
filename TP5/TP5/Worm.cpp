@@ -1,6 +1,6 @@
 #include "Worm.h"
 
-Worm::Worm()
+Worm::Worm(Key, Key, Key)
 {
 }
 

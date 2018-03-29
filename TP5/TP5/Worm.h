@@ -1,8 +1,11 @@
 #pragma once
+
+#include "Keys.h"
+
 class Worm
 {
 public:
-	Worm();
+	Worm(Key, Key, Key);
 	~Worm();
 	void moveLeft();
 	void moveRight();

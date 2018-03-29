@@ -12,12 +12,12 @@ int main(void) {
 	EventGenerator EventGenerator;
 	Dispatcher Dispatcher;
 	Userdata Userdata;
-	Allegro AllegroUtils;
+	Allegro Allegro;
 	Scene Scene;
-	Event Event;
+	Event Event = Event::noEvent;
 
-	if (AllegroUtils.Init(Userdata)) {
-		/*
+	if (Allegro.Init(Userdata)) {
+		
 		while (Event != Event::Quit) {
 
 			Event = EventGenerator.fetchEvent(Userdata, Allegro.Queue); //C++ reference
@@ -26,12 +26,10 @@ int main(void) {
 
 				Dispatcher.Dispatch(Event, Userdata); //C++ reference //Allegro se pasa a los handlers que dibujan.
 			}
-		}*/
+		}
 	}
 	else
 		std::cout << "Resources not loaded properly." << std::endl;
-
-	al_rest(10);
 
 	return EXIT_SUCCESS;
 }
