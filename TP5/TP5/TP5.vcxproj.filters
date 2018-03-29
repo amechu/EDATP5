@@ -33,6 +33,9 @@
     <ClCompile Include="Userdata.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Allegroclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h">
@@ -53,5 +56,11 @@
     <ClInclude Include="EventHandling.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Allegroclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

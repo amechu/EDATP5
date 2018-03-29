@@ -5,6 +5,6 @@ class EventGenerator
 public:
 	EventGenerator();
 	~EventGenerator();
-	Event fetchEvent(Userdata&);
+	Event fetchEvent(Userdata&, Allegro&);
 };
 

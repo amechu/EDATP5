@@ -2,27 +2,36 @@
 #include "EventHandling.h"
 #include "Dispatcher.h"
 #include "Userdata.h"
+#include "Allegroclass.h"
 #include "Scene.h"
+
+#include <iostream>
 
 int main(void) {
 
 	EventGenerator EventGenerator;
 	Dispatcher Dispatcher;
 	Userdata Userdata;
+	Allegro Allegro;
 	Scene Scene;
 	Event Event;
 
-	//initialize();
+	if (Allegro.Init(Userdata)) {
 
-	while (Event != Event::Quit) {
+		while (Event != Event::Quit) {
 
-		Event = EventGenerator.fetchEvent(Userdata); //C++ reference
+			Event = EventGenerator.fetchEvent(Userdata, Allegro); //C++ reference
 
-		if (Event != Event::noEvent) {
-			
-			Dispatcher.Dispatch(Event, Userdata); //C++ reference
+			if (Event != Event::noEvent) {
+
+				Dispatcher.Dispatch(Event, Userdata, Allegro); //C++ reference //Allegro se pasa a los handlers que dibujan.
+			}
 		}
 	}
+	else
+		std::cout << "Resources not loaded properly." << std::endl;
+
+	return EXIT_SUCCESS;
 }
 
 

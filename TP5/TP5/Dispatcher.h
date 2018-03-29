@@ -5,6 +5,6 @@ public:
 	Dispatcher();
 	~Dispatcher();
 
-	void Dispatch(Event, Userdata& Userdata);
+	void Dispatch(Event, Userdata& Userdata, Allegro& Allegro);
 };
 
