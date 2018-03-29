@@ -1,8 +1,8 @@
 #include "EventGenerator.h"
 #include "EventHandling.h"
+#include "Allegroclass.h"
 #include "Dispatcher.h"
 #include "Userdata.h"
-#include "Allegroclass.h"
 #include "Scene.h"
 
 #include <iostream>
@@ -12,24 +12,26 @@ int main(void) {
 	EventGenerator EventGenerator;
 	Dispatcher Dispatcher;
 	Userdata Userdata;
-	Allegro Allegro;
+	Allegro AllegroUtils;
 	Scene Scene;
 	Event Event;
 
-	if (Allegro.Init(Userdata)) {
-
+	if (AllegroUtils.Init(Userdata)) {
+		/*
 		while (Event != Event::Quit) {
 
-			Event = EventGenerator.fetchEvent(Userdata, Allegro); //C++ reference
+			Event = EventGenerator.fetchEvent(Userdata, Allegro.Queue); //C++ reference
 
 			if (Event != Event::noEvent) {
 
-				Dispatcher.Dispatch(Event, Userdata, Allegro); //C++ reference //Allegro se pasa a los handlers que dibujan.
+				Dispatcher.Dispatch(Event, Userdata); //C++ reference //Allegro se pasa a los handlers que dibujan.
 			}
-		}
+		}*/
 	}
 	else
 		std::cout << "Resources not loaded properly." << std::endl;
+
+	al_rest(10);
 
 	return EXIT_SUCCESS;
 }

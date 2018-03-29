@@ -3,6 +3,8 @@
 #include "allegro5\allegro.h"
 #include "allegro5\allegro_image.h"
 
+#include "Userdata.h"
+
 class Allegro
 {
 public:
@@ -17,7 +19,7 @@ public:
 	ALLEGRO_DISPLAY* Display;
 
 	const float FPS = 50.0;
-	const float SCREEN_W = 800;
-	const float SCREEN_H = 600;
+	const float SCREEN_W = 1920;
+	const float SCREEN_H = 696;
 };
 

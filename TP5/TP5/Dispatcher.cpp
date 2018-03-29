@@ -1,6 +1,3 @@
-#include "EventHandling.h" //Event type
-#include "Userdata.h" //Data usage
-#include "Allegroclass.h"
 #include "Dispatcher.h"
 
 Dispatcher::Dispatcher()

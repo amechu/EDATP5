@@ -1,6 +1,3 @@
-#include "EventHandling.h" //Event type
-#include "Userdata.h" //Data usage
-#include "Allegroclass.h"
 #include "EventGenerator.h"
 
 
@@ -14,6 +11,6 @@ EventGenerator::~EventGenerator()
 }
 
 
-Event EventGenerator::fetchEvent(Userdata& Userdata, Allegro& Allegro) {
-
+Event EventGenerator::fetchEvent(Userdata* Userdata, ALLEGRO_EVENT_QUEUE* Queue) {
+	return Event::Jump;
 }

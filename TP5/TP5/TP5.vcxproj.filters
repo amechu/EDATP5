@@ -63,4 +63,84 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Scenario.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F7.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F8.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F9.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wjump\wjump-F10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F7.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F8.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F9.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F11.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F12.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F13.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F14.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wwalking\wwalk-F15.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
