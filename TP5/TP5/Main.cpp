@@ -24,7 +24,7 @@ int main(void) {
 
 			if (Event != Event::noEvent) {
 
-				Dispatcher.Dispatch(Event, Userdata); //C++ reference //Allegro se pasa a los handlers que dibujan.
+				Dispatcher.Dispatch(Event); //C++ reference
 			}
 		}
 	}

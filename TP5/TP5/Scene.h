@@ -9,8 +9,9 @@ public:
 	Scene();
 	~Scene();
 	void Draw(const Userdata&); //No necesita cambiar nada para dibujar
-	void LoadWorm1(Key, Key, Key);
-	void LoadWorm2(Key, Key, Key);
+	void Refresh();
+	void LoadWorm1(Key, Key, Key, const Userdata&);
+	void LoadWorm2(Key, Key, Key, const Userdata&);
 
 private:
 	Worm* Worm1;

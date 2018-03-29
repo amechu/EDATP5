@@ -1,7 +1,6 @@
 #pragma once
 #include "EventHandling.h" //Event type
 #include "Userdata.h" //Data usage
-#include "Allegroclass.h"
 #include "Keys.h"
 #include "EventHandling.h"
 
