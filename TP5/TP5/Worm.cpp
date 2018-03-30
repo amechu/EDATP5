@@ -10,7 +10,7 @@ Worm::Worm(Key, Key, Key, const Userdata& Userdata)
 
 	for (int i = 0; i < 10; i++) {
 		string string = Userdata.str + to_string(i) + Userdata.ng; 
-		jumpImgs[i] = al_load_bitmap(string.c_str())
+		jumpImgs[i] = al_load_bitmap(string.c_str());
 	}
 }
 
