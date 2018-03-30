@@ -12,8 +12,6 @@ public:
 	void Refresh();
 	void LoadWorm1(Key, Key, Key, const Userdata&);
 	void LoadWorm2(Key, Key, Key, const Userdata&);
-
-private:
 	Worm* Worm1;
 	Worm* Worm2;
 };

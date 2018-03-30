@@ -2,5 +2,5 @@
 
 enum class Event
 {
-	moveLeft, moveRight, Jump, Quit, noEvent, Refresh
+	moveLeft1, moveRight1, Jump1, moveLeft2, moveRight2, Jump2, Quit, noEvent, Refresh
 };
