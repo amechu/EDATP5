@@ -18,6 +18,7 @@ public:
 	std::string NG = ".png";
 
 	//Worm 1 keys
+	
 	Key Worm1J = Key::W;
 	Key Worm1L = Key::A;
 	Key Worm1R = Key::D;

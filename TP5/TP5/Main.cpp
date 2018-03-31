@@ -14,9 +14,12 @@ int main(void) {
 	Userdata Userdata;
 	Allegro Allegro;
 	Scene Scene;
-	Event Event = Event::noEvent;
+	Event Event;
 
 	if (Allegro.Init(Userdata)) {
+
+		Scene.LoadWorm1(Userdata);
+		Scene.LoadWorm2(Userdata);
 		
 		while (Event != Event::Quit) {
 

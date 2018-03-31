@@ -17,7 +17,7 @@ typedef struct
 class Worm
 {
 public:
-	Worm(Key, Key, Key, const Userdata& Userdata);
+	Worm(const Userdata& Userdata);
 	~Worm();
 	void moveLeft();
 	void moveRight();

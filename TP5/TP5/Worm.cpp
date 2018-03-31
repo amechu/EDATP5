@@ -1,7 +1,7 @@
 #include "Worm.h"
 using namespace std;
 
-Worm::Worm(Key, Key, Key, const Userdata& Userdata)
+Worm::Worm(const Userdata& Userdata)
 {
 	this->walkImgs = Userdata.WormWalk;
 	this->jumpImgs = Userdata.WormJump;
