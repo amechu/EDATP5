@@ -37,6 +37,10 @@ Event EventGenerator::fetchEvent(ALLEGRO_EVENT_QUEUE* Queue, Userdata& Userdata)
 				Event = Event::moveLeft2;
 			else if (allegroEvent.keyboard.keycode == Userdata.worm2KeySet[Right])
 				Event = Event::moveRight2;
+			else if (allegroEvent.keyboard.keycode == ALLEGRO_KEY_Q)
+				Event = Event::Quit;
+			else if (allegroEvent.keyboard.keycode == ALLEGRO_KEY_ESCAPE)
+				Event = Event::Quit;
 		}
 	}
 	else

@@ -13,6 +13,7 @@ bool Initialization(Userdata& Userdata, Allegro& Allegro, Scene& Scene)
 
 	Scene.Worm1->Draw(Userdata); //DEBUG
 
+
 	return control;
 
 }

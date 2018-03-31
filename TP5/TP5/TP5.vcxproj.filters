@@ -157,4 +157,9 @@
       <Filter>Resource Files</Filter>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="Times_New_Roman_Normal.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
 </Project>

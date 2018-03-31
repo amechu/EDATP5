@@ -39,5 +39,8 @@ void Dispatcher::Dispatch(Event Event, Scene& Scene, Userdata& Userdata) {
 			Scene.Draw(Userdata);
 			break;
 		}
+		case Event::Quit: {
+			break;
+		}
 	}
 }
