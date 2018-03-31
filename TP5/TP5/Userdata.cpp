@@ -1,6 +1,4 @@
 #include "Userdata.h"
-#include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -12,7 +10,7 @@ Userdata::Userdata()
 	}
 
 	for (int i = 0; i < 10; i++) {
-		string string = str + to_string(i) + ng;
+		string string = STR + to_string(i) + NG;
 		this->WormJump[i] = al_load_bitmap(string.c_str());
 	}
 }

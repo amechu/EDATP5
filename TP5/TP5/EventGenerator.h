@@ -9,5 +9,5 @@ class EventGenerator
 public:
 	EventGenerator();
 	~EventGenerator();
-	Event fetchEvent(Userdata& Userdata, ALLEGRO_EVENT_QUEUE* Queue);
+	Event fetchEvent(ALLEGRO_EVENT_QUEUE* Queue);
 };

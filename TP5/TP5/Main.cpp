@@ -20,7 +20,7 @@ int main(void) {
 		
 		while (Event != Event::Quit) {
 
-			Event = EventGenerator.fetchEvent(Userdata, Allegro.Queue); //C++ reference
+			Event = EventGenerator.fetchEvent(Allegro.Queue); //C++ reference
 
 			if (Event != Event::noEvent) {
 

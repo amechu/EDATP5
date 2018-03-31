@@ -2,6 +2,7 @@
 #include "Userdata.h"
 #include "Keys.h"
 #include <string>
+#include <array>
 enum class WormState
 {
 	Iddle, Walking, Jumping
@@ -24,8 +25,8 @@ public:
 	void Draw();
 	void Refresh();
 private:
-	ALLEGRO_BITMAP* walkImgs[15];
-	ALLEGRO_BITMAP* jumpImgs[10];
+	std::array<ALLEGRO_BITMAP*, 15> walkImgs;
+	std::array<ALLEGRO_BITMAP*,10> jumpImgs;
 	Point Position;
 	WormState State;
 	unsigned int tickCount;

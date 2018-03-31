@@ -68,6 +68,11 @@ bool Allegro::Init(Userdata& Userdata) {
 		else
 			ret = false;
 	}
+
+	al_register_event_source(this->Queue, al_get_display_event_source(this->Display));
+	al_register_event_source(this->Queue, al_get_timer_event_source(this->Timer));
+	al_register_event_source(this->Queue, al_get_keyboard_event_source());
+
 	return ret;
 }
 
