@@ -104,6 +104,7 @@ bool Allegro::Init(Userdata& Userdata) {
 		al_register_event_source(this->Queue, al_get_timer_event_source(this->Timer));
 		al_register_event_source(this->Queue, al_get_keyboard_event_source());
 	}
+
 	else {
 		for (int i = 0; i < 15; i++) {
 			al_destroy_bitmap(Userdata.WormWalk[i]);
@@ -112,6 +113,8 @@ bool Allegro::Init(Userdata& Userdata) {
 			al_destroy_bitmap(Userdata.WormJump[i]);
 		}
 	}
+
+	al_start_timer(this->Timer);  //Inicializo el Timer
 
 	return ret;
 }
