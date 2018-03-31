@@ -36,7 +36,7 @@ void Dispatcher::Dispatch(Event Event, Scene& Scene, Userdata& Userdata) {
 			break;
 		}
 		case Event::Refresh: {
-			Scene.Refresh();
+			Scene.Draw(Userdata);
 			break;
 		}
 	}
