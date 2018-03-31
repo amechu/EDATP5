@@ -1,11 +1,14 @@
 #pragma once
 #include "Userdata.h"
-#include "Keys.h"
 #include <string>
 #include <array>
 enum class WormState
 {
 	Iddle, Walking, Jumping
+};
+
+enum class WormDirection {
+	Left, Right
 };
 
 typedef struct
@@ -17,18 +20,20 @@ typedef struct
 class Worm
 {
 public:
-	Worm(const Userdata& Userdata);
+	Worm(const Userdata& Userdata, unsigned int keySet);
 	~Worm();
 	void moveLeft();
 	void moveRight();
 	void Jump();
-	void Draw();
+	void Draw(Userdata& Userdata);
 	void Refresh();
 private:
-	std::array<ALLEGRO_BITMAP*, 15> walkImgs;
-	std::array<ALLEGRO_BITMAP*,10> jumpImgs;
 	Point Position;
-	WormState State;
+	WormState State = WormState::Iddle;
+	WormDirection Direction = WormDirection::Left;
 	unsigned int tickCount;
+	unsigned int jumpKey;
+	unsigned int moveLeftKey;
+	unsigned int moveRightKey;
 };
 

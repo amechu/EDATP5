@@ -10,20 +10,23 @@
 int main(void) {
 
 	EventGenerator EventGenerator;
+	Event Event = Event::noEvent;
 	Dispatcher Dispatcher;
 	Userdata Userdata;
 	Allegro Allegro;
 	Scene Scene;
-	Event Event;
 
 	if (Allegro.Init(Userdata)) {
 
-		Scene.LoadWorm1(Userdata);
-		Scene.LoadWorm2(Userdata);
+		Userdata.LoadWormImages();
+		Scene.LoadWorm1(Userdata, 1); //Worm inicializado con keyset 1
+		Scene.LoadWorm2(Userdata, 2); //Worm inicializado con keyset 2
 		
+		Scene.Worm1->Draw(Userdata); //DEBUG
+
 		while (Event != Event::Quit) {
 
-			Event = EventGenerator.fetchEvent(Allegro.Queue); //C++ reference
+			Event = EventGenerator.fetchEvent(Allegro.Queue, Userdata); //C++ reference
 
 			if (Event != Event::noEvent) {
 

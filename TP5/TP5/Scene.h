@@ -1,7 +1,6 @@
 #pragma once
 #include "Userdata.h"
 #include "Worm.h"
-#include "Keys.h"
 
 class Scene
 {
@@ -10,8 +9,8 @@ public:
 	~Scene();
 	void Draw(const Userdata&); //No necesita cambiar nada para dibujar
 	void Refresh();
-	void LoadWorm1(const Userdata&);
-	void LoadWorm2(const Userdata&);
+	void LoadWorm1(const Userdata&, unsigned int);
+	void LoadWorm2(const Userdata&, unsigned int);
 	Worm* Worm1;
 	Worm* Worm2;
 };

@@ -1,31 +1,30 @@
 #pragma once
-#include "Keys.h"
 #include "allegro5\allegro.h"
 #include "allegro5\allegro_image.h"
 #include <string>
 #include <array>
+
+enum {Jump, Left, Right, TotalActions};
 
 class Userdata
 {
 public:
 	Userdata();
 	~Userdata();
-	std::array<ALLEGRO_BITMAP*, 15> WormWalk;
-	std::array<ALLEGRO_BITMAP*, 10> WormJump;
+	void LoadWormImages();
+
+	std::array<ALLEGRO_BITMAP*, 15> WormWalk; //Worm walk bitmaps
+	std::array<ALLEGRO_BITMAP*, 10> WormJump; //Worm jump bitmaps
+
 	std::string str = "wwalk-F";
 	std::string ng = ".png";
 	std::string STR = "wjump-F";
 	std::string NG = ".png";
 
 	//Worm 1 keys
-	
-	Key Worm1J = Key::W;
-	Key Worm1L = Key::A;
-	Key Worm1R = Key::D;
+	unsigned int worm1KeySet[TotalActions] = { ALLEGRO_KEY_W, ALLEGRO_KEY_A, ALLEGRO_KEY_D };
 
 	//Worm 2 keys
-	Key Worm2J = Key::Up;
-	Key Worm2L = Key::Left;
-	Key Worm2R = Key::Right;
+	unsigned int worm2KeySet[TotalActions] = { ALLEGRO_KEY_UP, ALLEGRO_KEY_LEFT, ALLEGRO_KEY_RIGHT };
 };
 
