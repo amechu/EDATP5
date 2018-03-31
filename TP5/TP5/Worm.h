@@ -1,4 +1,6 @@
-#pragma once
+#ifndef WORM_H
+#define WORM_H
+
 #include "Userdata.h"
 #include <string>
 #include <array>
@@ -36,4 +38,6 @@ private:
 	unsigned int moveLeftKey;
 	unsigned int moveRightKey;
 };
+
+#endif
 

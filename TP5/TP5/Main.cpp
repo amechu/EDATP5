@@ -1,10 +1,4 @@
-#include "EventGenerator.h"
-#include "EventHandling.h"
-#include "Allegroclass.h"
-#include "Dispatcher.h"
-#include "Userdata.h"
-#include "Scene.h"
-
+#include "Initialization.h"
 #include <iostream>
 
 int main(void) {
@@ -16,13 +10,8 @@ int main(void) {
 	Allegro Allegro;
 	Scene Scene;
 
-	if (Allegro.Init(Userdata)) {
-
-		Userdata.LoadWormImages();
-		Scene.LoadWorm1(Userdata, 1); //Worm inicializado con keyset 1
-		Scene.LoadWorm2(Userdata, 2); //Worm inicializado con keyset 2
-		
-		Scene.Worm1->Draw(Userdata); //DEBUG
+	if (Initialization(Userdata, Allegro, Scene))  //Inicializo todos los recursos
+	{
 
 		while (Event != Event::Quit) {
 

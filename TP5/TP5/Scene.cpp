@@ -14,6 +14,10 @@ Scene::~Scene()
 
 void Scene::Draw(const Userdata& Userdata) {
 
+	Allegro.SetBackground();
+	Worm1->Draw(&Userdata);
+	Worm2->Draw(&Userdata);
+
 }
 
 

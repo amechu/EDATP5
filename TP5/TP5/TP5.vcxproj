@@ -72,6 +72,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Allegro_AddonImage>true</Allegro_AddonImage>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Allegro_AddonImage>true</Allegro_AddonImage>
+    <Allegro_AddonAudio>true</Allegro_AddonAudio>
+    <Allegro_AddonAcodec>true</Allegro_AddonAcodec>
+    <Allegro_LibraryType>DynamicDebug</Allegro_LibraryType>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -120,6 +126,7 @@
     <ClCompile Include="Allegroclass.cpp" />
     <ClCompile Include="Dispatcher.cpp" />
     <ClCompile Include="EventGenerator.cpp" />
+    <ClCompile Include="Initialization.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Userdata.cpp" />
@@ -130,6 +137,7 @@
     <ClInclude Include="Dispatcher.h" />
     <ClInclude Include="EventGenerator.h" />
     <ClInclude Include="EventHandling.h" />
+    <ClInclude Include="Initialization.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Userdata.h" />
     <ClInclude Include="Worm.h" />
@@ -139,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Scenario.png" />
+    <Image Include="WindowsXP.jpg" />
     <Image Include="wjump-F1.png" />
     <Image Include="wjump-F10.png" />
     <Image Include="wjump-F2.png" />
@@ -164,6 +173,9 @@
     <Image Include="wwalk-F7.png" />
     <Image Include="wwalk-F8.png" />
     <Image Include="wwalk-F9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="AoE.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

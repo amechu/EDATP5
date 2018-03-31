@@ -1,7 +1,10 @@
-#pragma once
+#ifndef USER_DATA_H
+#define USER_DATA_H
+
 #include "allegro5\allegro.h"
 #include "allegro5\allegro_image.h"
 #include <string>
+#include <iostream>
 #include <array>
 
 enum {Jump, Left, Right, TotalActions};
@@ -11,7 +14,7 @@ class Userdata
 public:
 	Userdata();
 	~Userdata();
-	void LoadWormImages();
+	bool LoadWormImages();
 
 	std::array<ALLEGRO_BITMAP*, 15> WormWalk; //Worm walk bitmaps
 	std::array<ALLEGRO_BITMAP*, 10> WormJump; //Worm jump bitmaps
@@ -28,3 +31,4 @@ public:
 	unsigned int worm2KeySet[TotalActions] = { ALLEGRO_KEY_UP, ALLEGRO_KEY_LEFT, ALLEGRO_KEY_RIGHT };
 };
 
+#endif

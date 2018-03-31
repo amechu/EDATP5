@@ -1,6 +1,9 @@
-#pragma once
+#ifndef SCENE_H
+#define SCENE_H
+
 #include "Userdata.h"
 #include "Worm.h"
+#include "Allegroclass.h"
 
 class Scene
 {
@@ -14,4 +17,6 @@ public:
 	Worm* Worm1;
 	Worm* Worm2;
 };
+
+#endif
 

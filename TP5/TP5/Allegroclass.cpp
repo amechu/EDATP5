@@ -4,6 +4,7 @@ Allegro::Allegro()
 {
 	this->Timer = NULL;
 	this->Background = NULL;
+	this->WindowsBackground = NULL;
 	this->Queue = NULL;
 	this->Display = NULL;
 }
@@ -12,10 +13,15 @@ Allegro::Allegro()
 Allegro::~Allegro()
 {
 	al_uninstall_keyboard();
+	al_stop_samples();
+	al_destroy_sample(this->music);
+	al_uninstall_audio();
 	al_destroy_bitmap(this->Background);
+	al_destroy_bitmap(this->WindowsBackground);
 	al_destroy_display(this->Display);
 	al_destroy_timer(this->Timer);
 	al_destroy_event_queue(this->Queue);
+	al_uninstall_system();
 }
 
 
@@ -26,41 +32,51 @@ bool Allegro::Init(Userdata& Userdata) {
 	if (al_init()) {
 		if (al_init_image_addon()) {
 			if (al_install_keyboard()) {
-				if (this->Display = al_create_display(this->SCREEN_W, this->SCREEN_H)) {
-					if (this->Timer = al_create_timer(1 / this->FPS)) {
-						if (this->Background = al_create_bitmap(this->SCREEN_W, this->SCREEN_H)) {
-							if (this->Queue = al_create_event_queue()) {
-								if (Background = al_load_bitmap("Scenario.png")) {
-									ret = true;
-									SetBackground();
+				if (al_install_audio()) {
+					if (this->Display = al_create_display(this->SCREEN_W, this->SCREEN_H)) {
+						if (this->Timer = al_create_timer(1 / this->FPS)) {
+							if (this->Background = al_create_bitmap(this->SCREEN_W, this->SCREEN_H)) {
+								if (this->Queue = al_create_event_queue()) {
+									if ((Background = al_load_bitmap(BITMAP_SCENARIO)) && (WindowsBackground = al_load_bitmap(BITMAP_WINDOWS))) {
+										ret = true;
+										SetBackground();
+										music = al_load_sample(BACKGROUND_MUSIC); //Cargo el track
+									}
+									else {
+										ret = false;
+										al_destroy_display(this->Display);
+										al_destroy_timer(this->Timer);
+										al_destroy_bitmap(this->Background);
+										al_destroy_event_queue(this->Queue);
+									}
 								}
 								else {
-									ret = false;
 									al_destroy_display(this->Display);
 									al_destroy_timer(this->Timer);
 									al_destroy_bitmap(this->Background);
-									al_destroy_event_queue(this->Queue);
 								}
 							}
 							else {
+								ret = false;
 								al_destroy_display(this->Display);
 								al_destroy_timer(this->Timer);
-								al_destroy_bitmap(this->Background);
 							}
 						}
-						else {
+						else
+						{
 							ret = false;
 							al_destroy_display(this->Display);
-							al_destroy_timer(this->Timer);
 						}
 					}
-					else {
+
+					else
 						ret = false;
-						al_destroy_display(this->Display);
-					}
 				}
-				else
+				else 
+				{
+					al_uninstall_audio();
 					ret = false;
+				}
 			}
 			else
 				ret = false;
@@ -78,6 +94,10 @@ bool Allegro::Init(Userdata& Userdata) {
 		if (Userdata.WormJump[i] = al_create_bitmap(60, 60)) {}
 		else ret = false;
 	}
+
+	if (music)
+		al_play_sample(music, 0.7, 0.0, 1.0, ALLEGRO_PLAYMODE_LOOP, NULL);
+
 
 	if (ret) {
 		al_register_event_source(this->Queue, al_get_display_event_source(this->Display));
@@ -99,6 +119,8 @@ bool Allegro::Init(Userdata& Userdata) {
 void Allegro::SetBackground() {
 
 	al_clear_to_color(al_map_rgb(50, 50, 50));
+	al_draw_bitmap(this->WindowsBackground, 0, 0, NULL);
 	al_draw_bitmap(this->Background, 0, 0, NULL);
 	al_flip_display();
 }
+
