@@ -12,5 +12,5 @@ EventGenerator::~EventGenerator()
 
 
 Event EventGenerator::fetchEvent(Userdata& Userdata, ALLEGRO_EVENT_QUEUE* Queue) {
-	return Event::Jump;
+	return Event::Jump1;
 }

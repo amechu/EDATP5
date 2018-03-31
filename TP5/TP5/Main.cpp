@@ -24,7 +24,7 @@ int main(void) {
 
 			if (Event != Event::noEvent) {
 
-				Dispatcher.Dispatch(Event); //C++ reference
+				Dispatcher.Dispatch(Event, Scene, Userdata); //C++ reference
 			}
 		}
 	}
