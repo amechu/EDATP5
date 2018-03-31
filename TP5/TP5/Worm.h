@@ -4,6 +4,10 @@
 #include "Userdata.h"
 #include <string>
 #include <array>
+#include <stlib.h>
+
+#define SIZEPXLS_WORM 27
+
 enum class WormState
 {
 	Iddle, Walking, Jumping
