@@ -10,8 +10,6 @@
 #include <allegro5/allegro_image.h>
 #include "Userdata.h"
 
-#define BITMAP_SCENARIO  "Scenario.png"
-#define BITMAP_WINDOWS  "windowsxp.png"
 #define BACKGROUND_MUSIC	"AoE.wav"
 #define ACTUAL_FONT "Times_New_Roman_Normal.ttf"
 
@@ -26,8 +24,6 @@ public:
 
 	ALLEGRO_TIMER* Timer;
 	ALLEGRO_EVENT_QUEUE* Queue;
-	ALLEGRO_BITMAP *Background;
-	ALLEGRO_BITMAP *WindowsBackground;
 	ALLEGRO_DISPLAY* Display;
 	ALLEGRO_SAMPLE * music;
 	ALLEGRO_FONT * font;

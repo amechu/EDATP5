@@ -6,7 +6,8 @@ bool Initialization(Userdata& Userdata, Allegro& Allegro, Scene& Scene)
 
 	control=Allegro.Init(Userdata); //Inicializo Allegro
 
-	control=Userdata.LoadWormImages();
+	control = Userdata.LoadWormImages();
+	control = Userdata.LoadBitmaps();
 
 	Scene.LoadWorm1(Userdata, 1); //Worm inicializado con keyset 1
 	Scene.LoadWorm2(Userdata, 2); //Worm inicializado con keyset 2

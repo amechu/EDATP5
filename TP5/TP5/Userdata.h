@@ -7,6 +7,10 @@
 #include <iostream>
 #include <array>
 
+
+#define BITMAP_SCENARIO  "Scenario.png"
+#define BITMAP_WINDOWS  "windowsxp.png"
+
 enum {Jump, Left, Right, TotalActions};
 
 class Userdata
@@ -15,6 +19,10 @@ public:
 	Userdata();
 	~Userdata();
 	bool LoadWormImages();
+	bool LoadBitmaps();
+
+	ALLEGRO_BITMAP *Background;
+	ALLEGRO_BITMAP *WindowsBackground;
 
 	std::array<ALLEGRO_BITMAP*, 15> WormWalk; //Worm walk bitmaps
 	std::array<ALLEGRO_BITMAP*, 10> WormJump; //Worm jump bitmaps
