@@ -14,6 +14,8 @@ public:
 	void Refresh(const Userdata& Userdata, Allegro& allegro);
 	void LoadWorm1(const Userdata&, unsigned int);
 	void LoadWorm2(const Userdata&, unsigned int);
+
+
 	Worm* Worm1;
 	Worm* Worm2;
 };

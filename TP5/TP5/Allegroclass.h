@@ -19,7 +19,6 @@ public:
 	Allegro();
 	~Allegro();
 	bool Init(Userdata&);
-	void SetBackground();
 
 
 	ALLEGRO_TIMER* Timer;

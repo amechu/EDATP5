@@ -21,6 +21,7 @@ public:
 	bool LoadWormImages();
 	bool LoadBitmaps();
 
+
 	ALLEGRO_BITMAP *Background;
 	ALLEGRO_BITMAP *WindowsBackground;
 
