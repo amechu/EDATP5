@@ -1,5 +1,4 @@
-#ifndef DISPATCHER_H
-#define DISPATCHER_H
+#pragma once
 
 #include "EventHandling.h" //Event type
 #include "Userdata.h" //Data usage
@@ -11,7 +10,6 @@ public:
 	Dispatcher();
 	~Dispatcher();
 
-	void Dispatch(Event Event, Scene& Scene, Userdata& Userdata, Allegro& Allegro);
+	void Dispatch(Event Event, Scene& Scene, Userdata& Userdata);
 };
 
-#endif

@@ -1,13 +1,7 @@
-#ifndef WORM_H
-#define WORM_H
-
+#pragma once
 #include "Userdata.h"
 #include <string>
 #include <array>
-#include <stdlib.h>
-
-#define SIZEPXLS_WORM 27
-
 enum class WormState
 {
 	Iddle, Walking, Jumping
@@ -42,6 +36,4 @@ private:
 	unsigned int moveLeftKey;
 	unsigned int moveRightKey;
 };
-
-#endif
 

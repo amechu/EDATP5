@@ -1,6 +1,4 @@
-#ifndef EVENT_GENERATOR_H
-#define EVENT_GENERATOR_H
-
+#pragma once
 #include "EventHandling.h" //Event type
 #include "Userdata.h" //Data usage
 #include "EventHandling.h"
@@ -12,5 +10,3 @@ public:
 	~EventGenerator();
 	Event fetchEvent(ALLEGRO_EVENT_QUEUE* Queue, Userdata& Userdata);
 };
-
-#endif

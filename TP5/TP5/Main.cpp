@@ -1,5 +1,13 @@
-#include "Initialization.h"
+#include "EventGenerator.h"
+#include "EventHandling.h"
+#include "Allegroclass.h"
+#include "Dispatcher.h"
+#include "Userdata.h"
+#include "Scene.h"
+
 #include <iostream>
+
+void GameInit(Userdata&, Scene&);
 
 int main(void) {
 
@@ -10,8 +18,9 @@ int main(void) {
 	Allegro Allegro;
 	Scene Scene;
 
-	if (Initialization(Userdata, Allegro, Scene))  //Inicializo todos los recursos
-	{
+	if (Allegro.Init(Userdata)) {
+
+		GameInit(Userdata, Scene);
 
 		while (Event != Event::Quit) {
 
@@ -19,7 +28,7 @@ int main(void) {
 
 			if (Event != Event::noEvent) {
 
-				Dispatcher.Dispatch(Event, Scene, Userdata, Allegro); //C++ reference
+				Dispatcher.Dispatch(Event, Scene, Userdata); //C++ reference
 			}
 		}
 	}
@@ -29,7 +38,18 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
+void GameInit(Userdata& Userdata, Scene& Scene) {
 
+	//Userdata.LoadWormImages();
+	Userdata.LoadBackground();
+	Userdata.LoadSceneImage();
+	//Scene.LoadWorm1(Userdata, 1); //Worm inicializado con keyset 1
+	//Scene.LoadWorm2(Userdata, 2); //Worm inicializado con keyset 2
+
+	//Scene.Worm1->Draw(Userdata); //DEBUG
+	al_flip_display();
+
+}
 
 
 

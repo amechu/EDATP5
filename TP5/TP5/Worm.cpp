@@ -15,8 +15,6 @@ Worm::Worm(const Userdata& Userdata, unsigned int keySet)
 			this->moveRightKey = Userdata.worm2KeySet[2];
 		}
 	}
-	Position.Y = 616;
-	Position.X = (rand() % 399) + 701;
 }
 
 
@@ -46,7 +44,7 @@ void Worm::Draw(Userdata& Userdata) {
 		case WormDirection::Left: {
 			switch (this->State) {
 				case WormState::Iddle: {
-					al_draw_bitmap(Userdata.WormWalk[0], Position.X, Position.Y, NULL); al_flip_display(); break;
+					al_draw_bitmap(Userdata.WormWalk[0], 701, 616, NULL); al_flip_display(); break;
 				}
 				case WormState::Walking: {
 
@@ -59,7 +57,7 @@ void Worm::Draw(Userdata& Userdata) {
 		case WormDirection::Right: {
 			switch (this->State) {
 				case WormState::Iddle: {
-					al_draw_bitmap(Userdata.WormWalk[0], Position.X, Position.Y, ALLEGRO_FLIP_HORIZONTAL); break;
+					al_draw_bitmap(Userdata.WormWalk[0], 701, 616, ALLEGRO_FLIP_HORIZONTAL); break;
 				}
 				case WormState::Walking: {
 
