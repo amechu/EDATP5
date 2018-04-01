@@ -131,11 +131,5 @@ bool Allegro::Init(Userdata& Userdata) {
 	return ret;
 }
 
-void Allegro::SetBackground() {
 
-	al_clear_to_color(al_map_rgb(50, 50, 50));
-	al_draw_bitmap(this->WindowsBackground, 0, 0, NULL);
-	al_draw_bitmap(this->Background, 0, 0, NULL);
-	al_flip_display();
-}
 

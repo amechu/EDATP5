@@ -23,7 +23,7 @@ void Scene::Draw(const Userdata& Userdata, Allegro& allegro) {
 }
 
 
-void Scene::Refresh(const Userdata& Userdata, Allegro& allegro) {
+void Scene::Refresh(Userdata& Userdata, Allegro& allegro) {
 
 		this->Draw(Userdata,allegro);
 		Worm1->Draw(Userdata);
