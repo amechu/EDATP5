@@ -1,15 +1,17 @@
 #ifndef ALLEGRO_CLASS_H
 #define ALLEGRO_CLASS_H
 
-#include "allegro5\allegro.h"
-#include "allegro5\allegro_image.h"
+#include <allegro5/allegro5.h>
 #include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_font.h>
+#include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_image.h>
 #include "Userdata.h"
 
 #define BITMAP_SCENARIO  "Scenario.png"
-#define BITMAP_WINDOWS  "WindowsXP.png"
+#define BITMAP_WINDOWS  "windowsxp.png"
 #define BACKGROUND_MUSIC	"AoE.wav"
 #define ACTUAL_FONT "Times_New_Roman_Normal.ttf"
 

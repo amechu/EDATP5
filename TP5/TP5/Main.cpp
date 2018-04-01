@@ -19,7 +19,7 @@ int main(void) {
 
 			if (Event != Event::noEvent) {
 
-				Dispatcher.Dispatch(Event, Scene, Userdata); //C++ reference
+				Dispatcher.Dispatch(Event, Scene, Userdata, Allegro); //C++ reference
 			}
 		}
 	}

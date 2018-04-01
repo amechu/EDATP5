@@ -28,7 +28,7 @@ Allegro::~Allegro()
 
 bool Allegro::Init(Userdata& Userdata) {
 
-	bool ret = false;
+	bool ret = true;
 
 	if (al_init()) {
 		if (al_init_image_addon()) {
@@ -47,10 +47,14 @@ bool Allegro::Init(Userdata& Userdata) {
 									if (this->Background = al_create_bitmap(this->SCREEN_W, this->SCREEN_H)) {
 								
 										if (this->Queue = al_create_event_queue()) {
-											if ((Background = al_load_bitmap(BITMAP_SCENARIO)) && (WindowsBackground = al_load_bitmap(BITMAP_WINDOWS))) {
-												ret = true;
+											if (Background = al_load_bitmap(BITMAP_SCENARIO)) 
+											{
+												if (WindowsBackground = al_load_bitmap(BITMAP_WINDOWS))
+												{
+													ret = true;
 												SetBackground();
 												music = al_load_sample(BACKGROUND_MUSIC); //Cargo el track
+												}
 											}
 											else {
 												ret = false;

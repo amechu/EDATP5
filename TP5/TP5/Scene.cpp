@@ -1,5 +1,6 @@
 #include "Scene.h"
 
+
 Scene::Scene()
 {
 }
@@ -12,11 +13,16 @@ Scene::~Scene()
 }
 
 
-void Scene::Draw(const Userdata& Userdata) {
+void Scene::Draw(const Userdata& Userdata, Allegro& allegro) {
 
-	Allegro.SetBackground();
-	Worm1->Draw(&Userdata);
-	Worm2->Draw(&Userdata);
+	al_clear_to_color(al_map_rgb(50, 50, 50));
+	al_draw_bitmap(allegro.WindowsBackground, 0, 0, NULL);
+	al_draw_bitmap(allegro.Background, 0, 0, NULL);
+	al_flip_display();
+
+	//allegro.SetBackground();
+	//Worm1->Draw(Userdata);
+	//Worm2->Draw(Userdata);
 
 }
 
@@ -34,3 +40,4 @@ void Scene::LoadWorm1(const Userdata& Userdata, unsigned int keySet) {
 void Scene::LoadWorm2(const Userdata& Userdata, unsigned int keySet) {
 	this->Worm2 = new Worm(Userdata, keySet);
 }
+

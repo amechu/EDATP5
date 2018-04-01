@@ -11,7 +11,7 @@ public:
 	Dispatcher();
 	~Dispatcher();
 
-	void Dispatch(Event Event, Scene& Scene, Userdata& Userdata);
+	void Dispatch(Event Event, Scene& Scene, Userdata& Userdata, Allegro& Allegro);
 };
 
 #endif
