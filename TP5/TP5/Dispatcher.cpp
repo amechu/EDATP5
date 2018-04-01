@@ -36,7 +36,7 @@ void Dispatcher::Dispatch(Event Event, Scene& Scene, Userdata& Userdata, Allegro
 			break;
 		}
 		case Event::Refresh: {
-			Scene.Draw(Userdata, Allegro);
+			Scene.Refresh(Userdata, Allegro);
 			break;
 		}
 		case Event::Quit: {

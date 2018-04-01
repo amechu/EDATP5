@@ -21,13 +21,17 @@ void Scene::Draw(const Userdata& Userdata, Allegro& allegro) {
 	al_flip_display();
 
 	//allegro.SetBackground();
-	//Worm1->Draw(Userdata);
-	//Worm2->Draw(Userdata);
+	//(this->Worm1)->Draw(Userdata);
+	//(this->Worm2)->Draw(Userdata);
 
 }
 
 
-void Scene::Refresh() {
+void Scene::Refresh(const Userdata& Userdata, Allegro& allegro) {
+
+	Draw(Userdata,allegro);
+	(this->Worm1)->Draw(Userdata);
+	(this->Worm2)->Draw(Userdata);
 
 }
 

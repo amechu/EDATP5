@@ -13,12 +13,16 @@ Allegro::Allegro()
 
 Allegro::~Allegro()
 {
+	al_uninstall_keyboard();
+	al_stop_samples();
 	al_destroy_sample(this->music);
+	al_uninstall_audio();
 	al_destroy_bitmap(this->Background);
 	al_destroy_bitmap(this->WindowsBackground);
 	al_destroy_display(this->Display);
 	al_destroy_timer(this->Timer);
 	al_destroy_event_queue(this->Queue);
+	al_uninstall_system();
 }
 
 
